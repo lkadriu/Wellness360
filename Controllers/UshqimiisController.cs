@@ -65,6 +65,8 @@ namespace Wellness360.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Kategoria"] = new SelectList(_context.KategoriaEUshqimeve, "Kategoria", "Kategoria", ushqimii.Kategoria);
+            ViewData["Ushqimi"] = new SelectList(_context.EmriUshqimit, "Ushqimi", "Ushqimi", ushqimii.Ushqimi);
             return View(ushqimii);
         }
 
@@ -81,6 +83,8 @@ namespace Wellness360.Controllers
             {
                 return NotFound();
             }
+            ViewData["Kategoria"] = new SelectList(_context.KategoriaEUshqimeve, "Kategoria", "Kategoria", ushqimii.Kategoria);
+            ViewData["Ushqimi"] = new SelectList(_context.EmriUshqimit, "Ushqimi", "Ushqimi", ushqimii.Ushqimi);
             return View(ushqimii);
         }
 
@@ -116,6 +120,8 @@ namespace Wellness360.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Kategoria"] = new SelectList(_context.KategoriaEUshqimeve, "Kategoria", "Kategoria", ushqimii.Kategoria);
+            ViewData["Ushqimi"] = new SelectList(_context.EmriUshqimit, "Ushqimi", "Ushqimi", ushqimii.Ushqimi);
             return View(ushqimii);
         }
 
