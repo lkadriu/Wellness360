@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Wellness360.Models;
 
-namespace Wellness360.Controllers
-{
+namespace Wellness360.Controllers 
+{ 
+	[Authorize(Roles ="User")]
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
