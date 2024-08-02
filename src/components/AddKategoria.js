@@ -27,7 +27,7 @@ const AddKategoria = ({ addKategoria }) => {
         onChange={handleInputChange}
         className={styles.input}
       />
-      <button type="submit" className={styles.button}>Add new kategoria</button>
+      <button>Add</button>
     </form>
   );
 };

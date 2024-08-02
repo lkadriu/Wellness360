@@ -1,31 +1,37 @@
 import React from 'react';
 
-const EmriUshqimitList = ({ ushqimet, editRow, deleteUshqim }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Ushqimi</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {ushqimet.length > 0 ? (
-        ushqimet.map(ushqim => (
-          <tr key={ushqim.ushqimi}>
-            <td>{ushqim.ushqimi}</td>
-            <td>
-              <button onClick={() => editRow(ushqim)}>Edit</button>
-              <button onClick={() => deleteUshqim(ushqim.ushqimi)}>Delete</button>
-            </td>
-          </tr>
-        ))
-      ) : (
+const EmriUshqimitList = ({ emratEushqimit, editRow, deleteEmriUshqimit }) => {
+  if (!emratEushqimit) {
+    return <p>Loading...</p>; // Ose shfaq një mesazh gabimi nëse është e përshtatshme
+  }
+
+  return (
+    <table>
+      <thead>
         <tr>
-          <td colSpan={3}>No ushqime</td>
+          <th>Ushqimi</th>
+          <th>Actions</th>
         </tr>
-      )}
-    </tbody>
-  </table>
-);
+      </thead>
+      <tbody>
+        {emratEushqimit.length > 0 ? (
+          emratEushqimit.map((emri) => (
+            <tr key={emri.ushqimi}>
+              <td>{emri.ushqimi}</td>
+              <td>
+                <button onClick={() => editRow(emri)}>Edit</button>
+                <button onClick={() => deleteEmriUshqimit(emri.ushqimi)}>Delete</button>
+              </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan={3}>No emrat e ushqimit found</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  );
+};
 
 export default EmriUshqimitList;
