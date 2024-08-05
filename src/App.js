@@ -8,13 +8,14 @@ import Navbar from './components/Navbar';
 import DoctorsAdvices from './pages/DoctorsAdvices';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import AdminDashboard from './pages/AdminDashboard';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import AdminRoute from './components/AdminRoute';
 
 const App = () => {
   return (
     <AuthProvider>
-      <Router>
         <Navbar />
         <div className="App">
           <Routes>
@@ -27,11 +28,12 @@ const App = () => {
             <Route path="/calories" element={<PrivateRoute element={<HealthTracker />} />} />
             <Route path="/your-activities" element={<PrivateRoute element={<HealthTracker />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
+            <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
           </Routes>
         </div>
-      </Router>
     </AuthProvider>
   );
 };
 
 export default App;
+

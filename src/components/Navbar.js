@@ -1,11 +1,11 @@
 // src/components/Navbar.js
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import AuthContext from '../contexts/AuthContext';
+import {AuthContext} from '../contexts/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { isAuthenticated, logout } = useContext(AuthContext);
+  const { isAuthenticated, user, logout } = useContext(AuthContext);
   
   return (
     <nav className="navbar">
@@ -13,7 +13,8 @@ const Navbar = () => {
         <li className="navbar-item"><Link to="/">Home</Link></li>
         {isAuthenticated ? (
           <>
-            <li className="navbar-item"><Link to="/food-management">Food Management</Link></li>
+          {user?.role === 'admin' && <li className="navbar-item"><Link to="/admin-dashboard">Admin Dashboard</Link></li>}
+          {user?.role === 'admin' && <li className="navbar-item"><Link to="/food-management">Food Management</Link></li>}
             <li className="navbar-item"><Link to="/workouts">Workouts</Link></li>
             <li className="navbar-item"><Link to="/register-activity">Register Activity</Link></li>
             <li className="navbar-item"><Link to="/calories">Calories</Link></li>
@@ -35,3 +36,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+

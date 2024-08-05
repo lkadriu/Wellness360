@@ -1,8 +1,7 @@
-// src/components/auth/Login.js
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import AuthContext from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -22,7 +21,7 @@ const Login = () => {
     axios.post('http://localhost:5004/api/account/login', form)
       .then(response => {
         localStorage.setItem('user', JSON.stringify(response.data));
-        login(); // Set the authentication state to true
+        login(response.data); // Set the authentication state to true and pass user data
         navigate('/'); // Ridrejtimi në faqen e fillimit ose në një faqe tjetër të mbrojtur
       })
       .catch(error => {
