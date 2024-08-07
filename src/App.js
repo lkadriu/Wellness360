@@ -14,6 +14,7 @@ import AdminRoute from './components/AdminRoute';
 import RegisterActivity from './pages/RegisterActivity';
 import ViewActivities from './pages/ViewActivities';
 import FoodInformations from './pages/FoodInformations';
+import Workouts from './pages/Workouts';
 
 const App = () => {
   return (
@@ -25,12 +26,13 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<PrivateRoute element={<HomePage />} />} />
             <Route path="/food-management" element={<PrivateRoute element={<FoodManagement />} />} />
-            <Route path="/workouts" element={<PrivateRoute element={<DoctorsAdvices />} />} />
+            <Route path="/workouts" element={<Workouts element={<Workouts />} />} />
             <Route path="/register-activity" element={<PrivateRoute element={<RegisterActivity />} />} />
             <Route path="/your-activities" element={<PrivateRoute element={<ViewActivities />} />} />
             <Route path="/food-informations" element={<FoodInformations element={<FoodInformations />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
+            
           </Routes>
         </div>
     </AuthProvider>
