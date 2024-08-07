@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
 import RegisterActivity from './pages/RegisterActivity';
 import ViewActivities from './pages/ViewActivities';
+import FoodInformations from './pages/FoodInformations';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/workouts" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/register-activity" element={<PrivateRoute element={<RegisterActivity />} />} />
             <Route path="/your-activities" element={<PrivateRoute element={<ViewActivities />} />} />
+            <Route path="/food-informations" element={<FoodInformations element={<FoodInformations />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
           </Routes>
