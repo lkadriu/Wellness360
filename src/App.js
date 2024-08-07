@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import FoodManagement from './pages/FoodManagement';
-import HealthTracker from './pages/HealthTracker';
 import Navbar from './components/Navbar';
 import DoctorsAdvices from './pages/DoctorsAdvices';
 import Register from './components/auth/Register';
@@ -12,6 +11,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
+import RegisterActivity from './pages/RegisterActivity';
+import ViewActivities from './pages/ViewActivities';
 
 const App = () => {
   return (
@@ -23,10 +24,9 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<PrivateRoute element={<HomePage />} />} />
             <Route path="/food-management" element={<PrivateRoute element={<FoodManagement />} />} />
-            <Route path="/workouts" element={<PrivateRoute element={<HealthTracker />} />} />
-            <Route path="/register-activity" element={<PrivateRoute element={<HealthTracker />} />} />
-            <Route path="/calories" element={<PrivateRoute element={<HealthTracker />} />} />
-            <Route path="/your-activities" element={<PrivateRoute element={<HealthTracker />} />} />
+            <Route path="/workouts" element={<PrivateRoute element={<DoctorsAdvices />} />} />
+            <Route path="/register-activity" element={<PrivateRoute element={<RegisterActivity />} />} />
+            <Route path="/your-activities" element={<PrivateRoute element={<ViewActivities />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
           </Routes>
@@ -36,4 +36,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -1,0 +1,33 @@
+.register-activity {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .register-activity form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-activity div {
+    margin-bottom: 15px;
+  }
+  
+  .register-activity label {
+    margin-bottom: 5px;
+  }
+  
+  .register-activity input {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
+  .register-activity button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .register-activity p {
+    margin-top: 15px;
+  }

@@ -1,0 +1,29 @@
+.view-activities {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .view-activities table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .view-activities th, .view-activities td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .view-activities th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .view-activities tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .view-activities tr:hover {
+    background-color: #ddd;
+  }
