@@ -1,0 +1,38 @@
+.health-data-list {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.health-data-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.health-data-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.health-data-list th, 
+.health-data-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.health-data-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.health-data-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.health-data-list tr:hover {
+    background-color: #ddd;
+}

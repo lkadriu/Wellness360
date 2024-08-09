@@ -15,6 +15,8 @@ import RegisterActivity from './pages/RegisterActivity';
 import ViewActivities from './pages/ViewActivities';
 import FoodInformations from './pages/FoodInformations';
 import Workouts from './pages/Workouts';
+import HealthDataForm from './pages/HealthDataForm'
+import HealthDataList from './pages/HealthDataList'
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
             <Route path="/register-activity" element={<PrivateRoute element={<RegisterActivity />} />} />
             <Route path="/your-activities" element={<PrivateRoute element={<ViewActivities />} />} />
             <Route path="/food-informations" element={<FoodInformations element={<FoodInformations />} />} />
+            <Route path="/health-data" element={<HealthDataForm element={<HealthDataForm />} />} />
+            <Route path="/health-view" element={<HealthDataList element={<HealthDataList />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
             

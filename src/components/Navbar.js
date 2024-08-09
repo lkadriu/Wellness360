@@ -19,6 +19,8 @@ const Navbar = () => {
             <li className="navbar-item"><Link to="/calories">Calories</Link></li>
             <li className="navbar-item"><Link to="/your-activities">Your Runs</Link></li>
             <li className="navbar-item"><Link to="/food-informations">Food Informations</Link></li>
+            <li className="navbar-item"><Link to="/health-data">Health Data</Link></li>
+            <li className="navbar-item"><Link to="/health-view"> Your Health Data</Link></li>
             <li className="navbar-item"><Link to="/doctors-advices">Doctors Advices</Link></li>
             <li className="navbar-item">
               <button className="logout-button" onClick={logout}>Logout</button>
