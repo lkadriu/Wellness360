@@ -16,11 +16,15 @@ const Navbar = () => {
             {user?.role === 'admin' && <li className="navbar-item"><Link to="/food-management">Food Management</Link></li>}
             <li className="navbar-item"><Link to="/workouts">Workouts</Link></li>
             <li className="navbar-item"><Link to="/register-activity">Register Run Activity</Link></li>
-            <li className="navbar-item"><Link to="/calories">Calories</Link></li>
-            <li className="navbar-item"><Link to="/your-activities">Your Runs</Link></li>
             <li className="navbar-item"><Link to="/food-informations">Food Informations</Link></li>
-            <li className="navbar-item"><Link to="/health-data">Health Data</Link></li>
-            <li className="navbar-item"><Link to="/health-view"> Your Health Data</Link></li>
+            <li className="navbar-item"><Link to="/health-data">Register Health Data</Link></li>
+            <li className="navbar-item dropdown">
+                    <button className="dropbtn">Your Data</button>
+                    <div className="dropdown-content">
+                        <Link to="/your-activities">Your Runs</Link>
+                        <Link to="/health-view">Your Health</Link>
+                    </div>
+                </li>
             <li className="navbar-item"><Link to="/doctors-advices">Doctors Advices</Link></li>
             <li className="navbar-item">
               <button className="logout-button" onClick={logout}>Logout</button>

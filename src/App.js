@@ -28,12 +28,12 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<PrivateRoute element={<HomePage />} />} />
             <Route path="/food-management" element={<PrivateRoute element={<FoodManagement />} />} />
-            <Route path="/workouts" element={<Workouts element={<Workouts />} />} />
+            <Route path="/workouts" element={<PrivateRoute element={<Workouts />} />} />
             <Route path="/register-activity" element={<PrivateRoute element={<RegisterActivity />} />} />
             <Route path="/your-activities" element={<PrivateRoute element={<ViewActivities />} />} />
-            <Route path="/food-informations" element={<FoodInformations element={<FoodInformations />} />} />
-            <Route path="/health-data" element={<HealthDataForm element={<HealthDataForm />} />} />
-            <Route path="/health-view" element={<HealthDataList element={<HealthDataList />} />} />
+            <Route path="/food-informations" element={<PrivateRoute element={<FoodInformations />} />} />
+            <Route path="/health-data" element={<PrivateRoute element={<HealthDataForm />} />} />
+            <Route path="/health-view" element={<PrivateRoute element={<HealthDataList />} />} />
             <Route path="/doctors-advices" element={<PrivateRoute element={<DoctorsAdvices />} />} />
             <Route path="/admin-dashboard" element={<AdminRoute element={<AdminDashboard />} />} />
             
