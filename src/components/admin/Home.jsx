@@ -24,14 +24,9 @@ const Home = () => {
       .then(data => setUserCount(data))
       .catch(error => console.error('Error fetching user count:', error));
 
-    // Fetch category count
-    fetch('http://localhost:5004/api/Kategoria/count')
-      .then(response => response.json())
-      .then(data => setCategoryCount(data))
-      .catch(error => console.error('Error fetching category count:', error));
 
     // Fetch foods count
-      fetch('http://localhost:5004/api/EmriUshqimit/count')
+      fetch('http://localhost:5004/api/Ushqimit/count')
       .then(response => response.json())
       .then(data => setFoodCount(data))
       .catch(error => console.error('Error fetching foods count:', error));
